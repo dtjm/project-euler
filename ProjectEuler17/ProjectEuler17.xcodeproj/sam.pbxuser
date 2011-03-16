@@ -1,0 +1,155 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 22D86EE60FF9E5A80062DE5B /* ProjectEuler17 */;
+		activeTarget = 8DD76F620486A84900D96B5E /* ProjectEuler17 */;
+		breakpoints = (
+			22D86F080FF9EA270062DE5B /* main.cpp:62 */,
+			22D86F110FF9EAA10062DE5B /* main.cpp:76 */,
+		);
+		codeSenseManager = 22D86EF30FF9E5AC0062DE5B /* Code sense */;
+		executables = (
+			22D86EE60FF9E5A80062DE5B /* ProjectEuler17 */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					509,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 268035496;
+			PBXWorkspaceStateSaveDate = 268035496;
+		};
+		perUserProjectItems = {
+			22D86EEC0FF9E5AC0062DE5B /* PBXTextBookmark */ = 22D86EEC0FF9E5AC0062DE5B /* PBXTextBookmark */;
+			22D86F3B0FF9F2EF0062DE5B /* PBXTextBookmark */ = 22D86F3B0FF9F2EF0062DE5B /* PBXTextBookmark */;
+		};
+		sourceControlManager = 22D86EF20FF9E5AC0062DE5B /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {687, 1876}}";
+			sepNavSelRange = "{2458, 0}";
+			sepNavVisRange = "{0, 688}";
+		};
+	};
+	22D86EE60FF9E5A80062DE5B /* ProjectEuler17 */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ProjectEuler17;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	22D86EEC0FF9E5AC0062DE5B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 143;
+		vrLoc = 0;
+	};
+	22D86EF20FF9E5AC0062DE5B /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	22D86EF30FF9E5AC0062DE5B /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	22D86F080FF9EA270062DE5B /* main.cpp:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "numToWords( int num )";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 62;
+		location = ProjectEuler17;
+		modificationTime = 268037391.669052;
+		state = 2;
+	};
+	22D86F110FF9EAA10062DE5B /* main.cpp:76 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "numToWords( int num )";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 76;
+		location = ProjectEuler17;
+		modificationTime = 268037393.868105;
+		state = 2;
+	};
+	22D86F3B0FF9F2EF0062DE5B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 107";
+		rLen = 0;
+		rLoc = 2458;
+		rType = 0;
+		vrLen = 688;
+		vrLoc = 0;
+	};
+	8DD76F620486A84900D96B5E /* ProjectEuler17 */ = {
+		activeExec = 0;
+		executables = (
+			22D86EE60FF9E5A80062DE5B /* ProjectEuler17 */,
+		);
+	};
+}

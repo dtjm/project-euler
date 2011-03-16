@@ -1,0 +1,67 @@
+MAKEFILE      = Makefile
+RM            = rm -f
+CP            = cp
+CXX           = g++
+LD            = $(CXX)
+COMPFLAGS     = -I. -W -Wall
+LDFLAGS       =	-s
+LIBS          =
+
+
+#################
+TARGET        = bigint.exe
+
+OBJS          =	bigint.o main.o
+
+
+#################
+# Target Rules
+#################
+.SUFFIXES :
+.SUFFIXES : .h .cpp .o
+.cpp.o:
+	@echo "------------------"
+	$(RM) $*.o
+#	$(CXX) $(DEPENDFLAGS) $<
+	$(CXX) $(COMPFLAGS) -c $<
+
+#################
+all:	first
+
+first : $(TARGET)
+
+
+#################
+$(TARGET):	$(OBJS) $(LIBS) $(MAKEFILE)
+		@echo "=================="
+		$(RM) $(TARGET)
+		$(LD) -o $(TARGET) $(LDFLAGS) $(OBJS) $(LIBS)
+		@echo " "
+
+
+#################
+cleano:	        
+	$(RM) $(OBJS)
+	$(RM) *.i
+	$(RM) *.ii
+	$(RM) *.s
+	$(RM) *.o
+	$(RM) *.d
+	$(RM) *.obj
+	$(RM) *.map
+	$(RM) *.asm
+	$(RM) *.tds
+	$(RM) *.dep
+	$(RM) core
+	$(RM) *.exe.*
+
+cleane:
+	$(RM) $(TARGET)
+	$(RM) *.exe
+
+clean:	cleano cleane
+
+
+#################
+bigint.o : $(MAKEFILE) bigint.cpp bigint.h
+main.o   : $(MAKEFILE) main.cpp bigint.h
