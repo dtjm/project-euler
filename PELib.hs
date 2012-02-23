@@ -1,10 +1,17 @@
 module PELib (
+	isPrime,
 	primes, 
 	divisors, 
 	fac,
-	choose )
+	choose,
+	digits,
+	rotateIntegerR )
 where
 import Data.List (nub)
+import Data.Char (digitToInt)
+
+isPrime :: Int -> Bool
+isPrime x = elem x (take x primes)
 
 primes = primes' [2..]
 	where primes' []     = []
@@ -21,6 +28,7 @@ powerset (x:xs) =  powerset xs ++ (map (x:) (powerset xs))
 
 divisors n = (filter (/=n) . nub . map product . powerset . factorize) n 
 
+-- Calculate the factorial of an integer
 fac :: Int -> Integer
 fac = 	let	fac' 0 = 1
 		fac' 1 = 1
@@ -28,3 +36,14 @@ fac = 	let	fac' 0 = 1
 	in 	(map fac' [0..] !!)
 
 choose n k = (fac n) `div` (fac k) `div` (fac (n-k))
+
+-- converts a number to a list of digits
+digits :: Integer -> [Int]
+digits n = map digitToInt ( show n )
+
+-- Rotate a list to the right (last element gets placed first)
+rotateListR (xs) = last xs : init xs
+
+-- Rotate an integer to the right
+rotateIntegerR :: Int -> Int
+rotateIntegerR n = read $ rotateListR $ show n
