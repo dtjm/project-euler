@@ -38,7 +38,7 @@ fac = 	let	fac' 0 = 1
 choose n k = (fac n) `div` (fac k) `div` (fac (n-k))
 
 -- converts a number to a list of digits
-digits :: Integer -> [Int]
+digits :: Int -> [Int]
 digits n = map digitToInt ( show n )
 
 -- Rotate a list to the right (last element gets placed first)
