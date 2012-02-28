@@ -1,6 +1,7 @@
 module PELib (
 	isPrime,
 	primes, 
+	primeCandidates,
 	divisors, 
 	fac,
 	choose,
@@ -10,10 +11,16 @@ where
 import Data.List (nub)
 import Data.Char (digitToInt)
 
-isPrime :: Int -> Bool
-isPrime x = elem x (take x primes)
+merge :: [a] -> [a] -> [a]
+merge (x:xs) (y:ys) = [x,y] ++ merge xs ys
 
-primes = primes' [2..]
+isPrime :: Int -> Bool
+isPrime x = elem x (takeWhile (<=x) primes)
+
+primeCandidates = ([2,3,5] ++ (filter ((/=0) . (`mod` 5)) kplusminusone))
+	where kplusminusone = (merge [6*k-1|k <- [1..]] [6*k+1|k <-[1..]])
+
+primes = primes' primeCandidates
 	where primes' []     = []
 	      primes' (x:xs) = x : primes' (filter ((/=0) . (`mod` x)) xs)
 
