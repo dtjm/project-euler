@@ -3,6 +3,7 @@ module PELib (
 	primes, 
 	primeCandidates,
 	divisors, 
+	isPalindrome,
 	fac,
 	choose,
 	digits,
@@ -33,7 +34,7 @@ factorize n = x : factorize (n `div` x)
 powerset [] = [[]]
 powerset (x:xs) =  powerset xs ++ (map (x:) (powerset xs))
 
-divisors n = (filter (/=n) . nub . map product . powerset . factorize) n 
+divisors n = (filter (/=n) . nub . map product . powerset . factorize) n
 
 -- Calculate the factorial of an integer
 fac :: Int -> Integer
@@ -54,3 +55,9 @@ rotateListR (xs) = last xs : init xs
 -- Rotate an integer to the right
 rotateIntegerR :: Int -> Int
 rotateIntegerR n = read $ rotateListR $ show n
+
+-- Determine whether an array is a palindrome
+isPalindrome :: Eq a => [a] -> Bool
+isPalindrome [] = True
+isPalindrome [_] = True
+isPalindrome (x:xs) = (last xs) == x && (isPalindrome $ init xs)
